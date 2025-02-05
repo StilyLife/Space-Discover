@@ -1,0 +1,16 @@
+.footer {
+  background: #222;
+  padding: 20px 0;
+  text-align: center;
+
+  p {
+    font-size: 14px;
+    color: #ccc;
+  }
+
+  @media (max-width: $breakpoint-mobile) {
+    p {
+      font-size: 12px;
+    }
+  }
+}

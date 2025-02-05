@@ -1,0 +1,50 @@
+.offers {
+  padding: 50px 0;
+  text-align: center;
+  background-color: #304571;
+
+  h2 {
+    font-size: 36px;
+  }
+
+  p {
+    font-size: 18px;
+    margin: 10px 0;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    background: #0066ff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+  }
+
+  // Адаптация под планшеты
+  @media (max-width: $breakpoint-tablet) {
+    h2 {
+      font-size: 28px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+
+  // Адаптация под мобильные устройства
+  @media (max-width: $breakpoint-mobile) {
+    h2 {
+      font-size: 24px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    .btn {
+      font-size: 16px;
+      padding: 8px 16px;
+    }
+  }
+}
