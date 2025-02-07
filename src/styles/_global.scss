@@ -9,11 +9,14 @@
 
 body {
   font-family: $font-main;
-  background-color: #304571;
+  background: linear-gradient(to bottom, #1a253f, #304571);
   color: $primary-color;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
 }
 
-// Hover-эффекты для кнопок
+
 .btn {
   transition: background 0.3s ease-in-out;
 
@@ -22,7 +25,6 @@ body {
   }
 }
 
-// Hover-эффекты для ссылок
 a {
   transition: color 0.3s ease-in-out;
 

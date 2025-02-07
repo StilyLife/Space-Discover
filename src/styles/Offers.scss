@@ -1,50 +1,257 @@
-.offers {
-  padding: 50px 0;
-  text-align: center;
-  background-color: #304571;
+.container {
+  position: relative;
+  z-index: 2;
+  margin: 0 auto;
+}
 
-  h2 {
-    font-size: 36px;
+.yellowSpan {
+  color: #EBFF00;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 40px;
+  gap: 20px;
+  background: url('../assets/39610.png') no-repeat center;
+  background-size: cover;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.2);
+    z-index: 1;
   }
 
-  p {
-    font-size: 18px;
-    margin: 10px 0;
-  }
+  .hero-content {
+    flex: 1;
+    text-align: left;
+    padding-left: 80px;
+    z-index: 2;
 
-  .btn {
-    padding: 10px 20px;
-    background: #0066ff;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-    font-size: 18px;
-  }
-
-  // Адаптация под планшеты
-  @media (max-width: $breakpoint-tablet) {
-    h2 {
-      font-size: 28px;
+    h1 {
+      font-size: 72px;
+      font-weight: 800;
+      margin-bottom: 22px;
+      position: relative;
     }
 
     p {
-      font-size: 16px;
-    }
-  }
-
-  // Адаптация под мобильные устройства
-  @media (max-width: $breakpoint-mobile) {
-    h2 {
-      font-size: 24px;
-    }
-
-    p {
-      font-size: 14px;
+      font-size: 32px;
+      margin-bottom: 22px;
+      font-weight: bold;
     }
 
     .btn {
-      font-size: 16px;
-      padding: 8px 16px;
+      margin-top: 20px;
+      padding: 10px 40px;
+      background: #EBFF00;
+      color: #000;
+      border: none;
+      border-radius: 100px;
+      cursor: pointer;
+      font-size: 22px;
+      font-weight: bold;
+      transition: background 0.3s;
+      font-family: inherit;
+
+      &:hover {
+        background: rgba(235, 255, 0, 0.6);
+      }
     }
   }
+
+  .title-image {
+    flex: 1;
+    text-align: right;
+    z-index: 1;
+
+    img {
+      max-width: 400px;
+      width: 100%;
+    }
+  }
+}
+
+.offers-cards {
+  margin: 0 80px;
+}
+
+
+.offers-title {
+  text-align: start;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas:
+    "card1 card1"
+    "card2 card3"
+    "card4 card4";
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.card {
+  background-size: cover;
+  background-position: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  border-radius: 10px;
+  min-width: 320px;
+  min-height: 350px;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1;
+  }
+
+  h2 {
+    font-size: 74px;
+    position: relative;
+    margin-bottom: 20px;
+    z-index: 2;
+  }
+
+  h3 {
+    font-size: 46px;
+    max-width: 426px;
+    padding-bottom: 22px;
+    z-index: 2;
+    position: relative;
+  }
+
+  p {
+    font-size: 26px;
+    margin-bottom: 22px;
+    font-weight: 800;
+    position: relative;
+    z-index: 2;
+  }
+
+  &:hover {
+    transform: translateY(-10px);
+  }
+}
+
+.content {
+  padding: 35px;
+  max-width: 690px;
+}
+
+/* Уникальные области для карточек */
+.card-1 {
+  background-image: url('../assets/39625.jpg');
+  grid-area: card1;
+}
+
+.card-2{
+  background-image: url('../assets/39627-1.jpg');
+  grid-area: card2;
+}
+
+.card-3 {
+  background-image: url('../assets/39613.jpg');
+  grid-area: card3;
+}
+
+.card-4 {
+  background-image: url('../assets/39627.jpg');
+  grid-area: card4;
+}
+
+/* Кнопки */
+.btn {
+  padding: 10px 40px;
+  background: inherit;
+  color: #EBFF00;
+  border: #EBFF00 2px solid;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 22px;
+  font-weight: bold;
+  transition: background 0.3s;
+  font-family: inherit;
+  position: relative;
+  z-index: 2;
+}
+
+.btn:hover {
+  background: #ff70d9;
+  transform: scale(1.05);
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+
+    .hero-content {
+      padding: 0;
+    }
+
+    .hero-image {
+      text-align: center;
+    }
+  }
+
+  .card.large {
+    grid-column: span 1;
+  }
+
+  .cards-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "card1"
+      "card2"
+      "card3"
+      "card4";
+  }
+}
+
+.highlight {
+  color: #FF70D9;
+}
+
+.text-info {
+  margin: 0 80px;
+}
+
+.text-info-title{
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.text-info-paragraph{
+  font-size: 20px;
+  font-weight: 700;
+  padding: 17px 0;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.text-info-link, a{
+  font-size: 20px;
+  font-weight: 800;
+  color: #EBFF00;
+  margin-bottom: 60px;
+  text-decoration: none;
 }

@@ -1,10 +1,12 @@
 import React from 'react';
+import '../styles/Footer.scss';
 
 function Footer() {
   return (
     <footer className="footer">
-      <div className="container">
-        <p>Exciting space adventure!</p>
+      <div className="adventure">
+      <img className="rocket" src="../assets/roc.png" alt="Rocket Logo" />
+      <a href="#"><p>Exciting space adventure!</p></a>
       </div>
     </footer>
   );

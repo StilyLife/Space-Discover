@@ -1,27 +1,14 @@
 @import 'variables';
 
 .header {
-  background: url('../assets/39610.png') no-repeat center;
-  background-size: cover;
+  background: #000;
   color: #fff;
-  position: relative;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); // Затемнение
-    z-index: 1;
-  }
 
   .header-top {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 80px;
+    padding: 0 80px;
     position: relative;
     z-index: 2;
     background: #000;
@@ -41,6 +28,9 @@
     display: flex;
     list-style: none;
     gap: 50px;
+    align-items: center;
+    padding-block: 20px;
+    margin: 0;
 
     li a {
       color: #fff;
@@ -51,98 +41,24 @@
 
     li a:hover {
       background: linear-gradient(90deg, #EBFF00, #FF70D9);
-      background-clip: text; 
-      -webkit-background-clip: text; 
+      background-clip: text;
+      -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
     }
 
     .cart-icon {
-      display: flex;
-      align-items: center;
-  
+
+
       img {
         width: 24px;
         transition: filter 0.3s ease;
       }
-  
+
       &:hover img {
-        filter: brightness(0) saturate(100%) 
-                invert(75%) sepia(60%) saturate(600%) 
+        filter: brightness(0) saturate(100%)
+                invert(75%) sepia(60%) saturate(600%)
                 hue-rotate(280deg);
       }
     }
   }
-
-  .container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-  }
-
-  .header-content {
-    flex: 1;
-    text-align: left;
-    padding-left: 81.5px;
-
-    h1 {
-      font-size: 72px;
-      font-weight: 800;
-      margin-bottom: 10px;
-    }
-
-    p {
-      font-size: 32px;
-      margin-bottom: 20px;
-      font-weight: bold;
-    }
-
-    .btn {
-      margin-top: 20px;
-      padding: 10px 20px;
-      background: #EBFF00;
-      color: #000;
-      border: none;
-      border-radius: 100px;
-      cursor: pointer;
-      font-size: 22px;
-      font-weight: bold;
-
-      &:hover {
-        background: rgba(235, 255, 0, 0.6);
-      }
-    }
-  }
-
-  .header-image {
-    flex: 1;
-    text-align: right;
-
-    img {
-      max-width: 400px;
-      width: 100%;
-    }
-  }
-
-  @media (max-width: 768px) {
-    .container {
-      flex-direction: column;
-      text-align: center;
-    }
-
-    .header-content {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .header-image {
-      text-align: center;
-    }
-  }
-}
-
-.span {
-  color: #FF70D9;
 }
