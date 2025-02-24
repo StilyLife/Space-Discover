@@ -14,7 +14,7 @@
   justify-content: space-between;
   margin-bottom: 40px;
   gap: 20px;
-  background: url('../assets/39610.png') no-repeat center;
+  background: url('/assets/39610.png') no-repeat center;
   background-size: cover;
 
   &::before {
@@ -146,10 +146,6 @@
     position: relative;
     z-index: 2;
   }
-
-  &:hover {
-    transform: translateY(-10px);
-  }
 }
 
 .content {
@@ -157,28 +153,27 @@
   max-width: 690px;
 }
 
-/* Уникальные области для карточек */
+
 .card-1 {
-  background-image: url('../assets/39625.jpg');
+  background-image: url('/assets/39625.jpg');
   grid-area: card1;
 }
 
 .card-2{
-  background-image: url('../assets/39627-1.jpg');
+  background-image: url('/assets/39627-1.jpg');
   grid-area: card2;
 }
 
 .card-3 {
-  background-image: url('../assets/39613.jpg');
+  background-image: url('/assets/39613.jpg');
   grid-area: card3;
 }
 
 .card-4 {
-  background-image: url('../assets/39627.jpg');
+  background-image: url('/assets/39627.jpg');
   grid-area: card4;
 }
 
-/* Кнопки */
 .btn {
   padding: 10px 40px;
   background: inherit;
@@ -199,7 +194,6 @@
   transform: scale(1.05);
 }
 
-/* Адаптивность */
 @media (max-width: 768px) {
   .hero-section {
     flex-direction: column;

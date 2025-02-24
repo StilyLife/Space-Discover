@@ -1,7 +1,7 @@
 import React from 'react';
-import Header from './components/Header';
-import Offers from './components/Offers';
-import Footer from './components/Footer';
+import Header from './components/Header/Header';
+import Offers from './components/Offers/Offers';
+import Footer from './components/Footer/Footer';
 import './styles/App.scss';
 
 
